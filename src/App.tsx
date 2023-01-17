@@ -2,18 +2,20 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
 import ConfirmDialog from './components/ConfirmDialog'
+import { confirm } from './components/ConfirmGlobal'
 
 function App() {
   const [count, setCount] = useState(0)
-  const [confirm , setConfirm] = useState(false)
+  const increment = async () => {
+    if(await confirm()){
+      setCount(count + 1)
+    }
+  }
   return (
     <div className="App">
-      <ConfirmDialog 
-      onConfirm={() => setCount((count) => count + 1)} 
-      onCanel={()=>setConfirm(false)} 
-      open={confirm}/>
+      
       <div className="card">
-        <button onClick={()=>setConfirm(true)}>
+        <button onClick={increment}>
           count is {count}
         </button>
       </div>

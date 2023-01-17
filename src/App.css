@@ -41,6 +41,10 @@
 }
 .dialog-content{
   display: none;
+  border: solid 2px #dbdbdb;
+    padding: 20px;
+    width: 100%;
+    border-radius: 20px;
 }
 .dialog-content.show{
   display: block;
