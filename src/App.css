@@ -39,3 +39,10 @@
 .read-the-docs {
   color: #888;
 }
+.dialog-content{
+  display: none;
+}
+.dialog-content.show{
+  display: block;
+
+}
