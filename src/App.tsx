@@ -7,7 +7,7 @@ import { confirm } from './components/ConfirmGlobal'
 function App() {
   const [count, setCount] = useState(0)
   const increment = async () => {
-    if(await confirm()){
+    if(await confirm({title: 'Voullez vous incrémenter votre compte ?'})){
       setCount(count + 1)
     }
   }
